@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.onBackground
+                    color = MaterialTheme.colors.secondary
                 ) {
                     BusinessCardApplication()
                 }
@@ -75,7 +75,7 @@ fun BusinessCard(
                 )
                 Text(
                     text = title,
-                    fontSize = 32.sp,
+                    fontSize = 46.sp,
                     color = Color.White,
                     modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
                 )
@@ -91,45 +91,49 @@ fun BusinessCard(
     ) {
         Column(
         ) {
-            Row(modifier = modifier.padding(start = 65.dp)) {
+            Row(modifier = modifier
+                .fillMaxWidth()
+                .padding(start = 70.dp)) {
                 Icon(
                     Icons.Filled.Menu,
                     contentDescription = null,
-                    tint = Color.White
+                    tint = Color.White,
+                    modifier = Modifier.padding(end = 16.dp)
                 )
                 Text(
                     text = "+11 (123) 444 555 666",
                     textAlign = TextAlign.Justify,
-                    color = Color.White,
-                    modifier = Modifier.padding(8.dp)
+                    color = Color.White
                 )
             }
-            Row(modifier = modifier.padding(start = 65.dp)) {
+            Row(modifier = modifier
+                .fillMaxWidth()
+                .padding(start = 70.dp)) {
                 Icon(
                     Icons.Filled.Menu,
                     contentDescription = null,
-                    tint = Color.White
+                    tint = Color.White,
+                    modifier = Modifier.padding(end = 16.dp)
                 )
                 Text(
-                    text = "+11 (123) 444 555 666",
+                    text = "@AndroidDeveloper",
                     textAlign = TextAlign.Justify,
                     color = Color.White,
-                    modifier = Modifier
-                        .padding(start = 10.dp)
                 )
             }
-            Row(modifier = modifier.padding(start = 65.dp)) {
+            Row(modifier = modifier
+                .fillMaxWidth()
+                .padding(start = 70.dp, bottom = 30.dp)) {
                 Icon(
                     Icons.Filled.Menu,
                     contentDescription = null,
-                    tint = Color.White
+                    tint = Color.White,
+                    modifier = Modifier.padding(end = 16.dp)
                 )
                 Text(
-                    text = "+11 (123) 444 555 666",
+                    text = "jen.doe@android.com",
                     color = Color.White,
-                    textAlign = TextAlign.Justify,
-                    modifier = Modifier
-                        .padding(8.dp)
+                    textAlign = TextAlign.Justify
                 )
             }
         }
